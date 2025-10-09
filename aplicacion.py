@@ -10,7 +10,7 @@ Original file is located at
 """
 
 #Instalación de libreria
-#!pip install streamlit
+!pip install streamlit
 
 #Importación de librerias
 import streamlit as st
