@@ -18,15 +18,16 @@ import pandas as pd
 import yfinance as yf
 
 #Titulación
-st.title("Mi primera aplicación")
+st.title("Mi primera aplicación en Streamlit")
 
 #Lista de ticker inicial
 lista_tickers = ["APL","MSFT","NVDA","META"]
 
-#Selector
-ticker = st.selectbox("Elija un ticker",lista_tickers)
+#Multiselector
+ticker = multiselect("Elija un ticker o varios",lista_tickers)
 
 #Boton
 if st.button("Descargar"):
   data=yf.download(ticker,period="1mo")
+  st.subheader("Precios de cierre")    
   st.dataframe(data)
