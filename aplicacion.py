@@ -21,7 +21,7 @@ import yfinance as yf
 st.title("Mi primera aplicación")
 
 #Lista de ticker inicial
-lista_tickers = ["APL","MSFT","NVDA"]
+lista_tickers = ["APL","MSFT","NVDA","META"]
 
 #Selector
 ticker = st.selectbox("Elija un ticker",lista_tickers)
